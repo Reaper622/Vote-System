@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 const path = require('path')
 
 module.exports = {
@@ -18,30 +19,30 @@ module.exports = {
 	lintOnSave: true, // 是否在保存的时候检查
 	productionSourceMap: true, // 生产环境是否生成 sourceMap 文件
 	css: {
-		extract: true, // 是否使用css分离插件 ExtractTextPlugin
+		extract: false, // 是否使用css分离插件 ExtractTextPlugin
 		sourceMap: false, // 开启 CSS source maps
 		loaderOptions: {}, // css预设器配置项
 		modules: false // 启用 CSS modules for all css / pre-processor files.
 	},
 	// 反向代理
-	// devServer: {
-	//   // 环境配置
-	//   host: '192.168.1.53',
-	//   port: 8080,
-	//   https: false,
-	//   hotOnly: false,
-	//   open: true, //配置自动启动浏览器
-	//   proxy: {
-	//     // 配置多个代理(配置一个 proxy: 'http://localhost:4000' )
-	//     // '/api': {
-	//     //   target: 'http://192.168.1.248:9888',
-	//     //   // target: 'http://192.168.1.4:8999',
-	//     //   pathRewrite: {
-	//     //     '^/api': '/api'
-	//     //   }
-	//     // }
-	//   }
-	// },
+	devServer: {
+	  // 环境配置
+	  port: 8080,
+	  https: false,
+	  hotOnly: false,
+		open: true, // 配置自动启动浏览器
+		disableHostCheck: true
+	  // proxy: {
+	  //   // 配置多个代理(配置一个 proxy: 'http://localhost:4000' )
+	  //   // '/api': {
+	  //   //   target: 'http://192.168.1.248:9888',
+	  //   //   // target: 'http://192.168.1.4:8999',
+	  //   //   pathRewrite: {
+	  //   //     '^/api': '/api'
+	  //   //   }
+	  //   // }
+		// }
+	},
 	pluginOptions: {
 		// 第三方插件配置
 		// ...
