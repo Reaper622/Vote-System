@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 // 引入reset.css
 import '@common/reset.css'
+// 引入全局样式
+import '@common/common.css'
 
 Vue.config.productionTip = false
 
